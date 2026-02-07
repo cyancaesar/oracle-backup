@@ -1,6 +1,6 @@
 # Oracle backup scripts
 
-Scripts I created for assisting of Oracle Database backup and recovery. It covers both RMAN and Data Pump.
+Scripts I created to assist myself for handling Oracle Database backup and recovery. It covers both RMAN and Data Pump.
 
 RMAN scripts are segragated, each does it tasks as their name implies.
 
