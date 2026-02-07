@@ -1,0 +1,8 @@
+RUN {
+    BACKUP
+        INCREMENTAL LEVEL 1
+        DATABASE
+        SECTION SIZE 8G
+        TAG 'LEVEL0_DAILY'
+        FORMAT '/backup/rman/level1/%U.bkp';
+}

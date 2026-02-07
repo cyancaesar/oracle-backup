@@ -1,0 +1,8 @@
+RUN {
+    BACKUP
+        ARCHIVELOG ALL
+        NOT BACKED UP 1 TIMES
+        DELETE INPUT
+        TAG 'ARCHIVELOG_HOURLY'
+        FORMAT '/u01/backup/rman/archivelog/%U.bkp';
+}
