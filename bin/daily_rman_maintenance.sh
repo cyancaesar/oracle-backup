@@ -1,4 +1,11 @@
 #! /bin/sh
+#
+# Script Name: daily_rman_maintenance.sh
+# Description: Executes Oracle RMAN daily maintenance tasks.
+# Backup Type: RMAN Maintenance (Daily)
+# Author: Abdulaziz (cyancaesar)
+# Date: 2026-02-09
+#
 
 export ORACLE_HOME=/u01/app/oracle/products/23.26.1/db_home1
 export ORACLE_SID=cyandb01
@@ -8,8 +15,8 @@ readonly DATE_NOW=$(date +%Y_%m_%d_%S)
 readonly BASE_DIR=/backup/rman
 readonly SCRIPT_DIR=${BASE_DIR}/scripts
 readonly LOG_DIR=${BASE_DIR}/scripts
-readonly RMAN_FILE=${SCRIPT_DIR}/daily/level1.daily.rman
-readonly LOG_FILE=${BASE_DIR}/logs/level1.daily.${DATE_NOW}.log
+readonly RMAN_FILE=${SCRIPT_DIR}/daily/maintenance.daily.rman
+readonly LOG_FILE=${BASE_DIR}/logs/maintenance.daily.${DATE_NOW}.log
 
 # Check if the user is in dba group
 id -nG $USER | grep -q dba
@@ -30,9 +37,9 @@ rman target / \
   log=${LOG_FILE}
   
 if [ $? -eq 0 ]; then
-  echo "RMAN daily level 1 backup script finished successfully.";
+  echo "RMAN daily maintenance script finished successfully.";
   exit 0
 else
-  echo "RMAN daily level 1 backup script failed.";
+  echo "RMAN daily maintenance script failed.";
   exit 1
 fi

@@ -5,6 +5,7 @@
 # 
 # Ensure you have created a sufficient data pump user and created a directory
 # for the data pump export and granted it to the user.
+#
 
 set -e
 

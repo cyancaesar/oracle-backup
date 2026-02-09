@@ -85,3 +85,7 @@ CONFIGURE RETENTION POLICY TO RECOVERY WINDOW OF 30 DAYS;
 - The parameter `CONTROL_FILE_RECORD_KEEP_TIME` must be greater than or equal to the recovery window.
 
 Now all the RMAN run block will use these persistent configuration unless overridden.
+
+## Author
+
+~Abdulaziz (cyancaesar)

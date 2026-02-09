@@ -1,4 +1,11 @@
 #! /bin/sh
+#
+# Script Name: weekly_level0_rman.sh
+# Description: Executes an Oracle RMAN Weekly Level 0 (full) database backup.
+# Backup Type: RMAN Level 0 (Full Backup)
+# Author: Abdulaziz (cyancaesar)
+# Date: 2026-02-09
+#
 
 export ORACLE_HOME=/u01/app/oracle/products/23.26.1/db_home1
 export ORACLE_SID=cyandb01

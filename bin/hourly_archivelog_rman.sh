@@ -1,4 +1,11 @@
 #! /bin/sh
+#
+# Script Name: hourly_archivelog_rman.sh
+# Description: Executes an Oracle RMAN Hourly Archivelog backup.
+# Backup Type: RMAN Archivelog Backup (Hourly)
+# Author: Abdulaziz (cyancaesar)
+# Date: 2026-02-09
+#
 
 export ORACLE_HOME=/u01/app/oracle/products/23.26.1/db_home1
 export ORACLE_SID=cyandb01
